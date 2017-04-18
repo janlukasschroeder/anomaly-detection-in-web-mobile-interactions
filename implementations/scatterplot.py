@@ -3,13 +3,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-df = pd.read_csv('../assets/436-Simon-Doyle-Web-Mobile-Actions.csv')
-df = pd.read_csv('../assets/615-Andrew-Willis-Web-Mobile-Actions.csv')
+df = pd.read_csv('../assets/436-Web-Mobile-Actions.csv')
+df = pd.read_csv('../assets/615-Web-Mobile-Actions.csv')
 
 
 print df
 
-plt.figure()
 df.plot.scatter(x='mobile_actions', y='web_actions');
 
 # print df['action_id'].value_counts()

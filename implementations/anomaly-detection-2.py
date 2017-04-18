@@ -7,7 +7,7 @@ from matplotlib import style
 style.use("ggplot")
 
 
-df = pd.read_csv('assets/436-Simon-Doyle-Web-Mobile-Actions.csv')
+df = pd.read_csv('assets/436-Web-Mobile-Actions.csv')
 
 array = df.as_matrix(columns=df.columns[1:])
 

@@ -11,7 +11,7 @@ from sklearn.preprocessing import StandardScaler
 # centers = [[1, 1], [-1, -1], [1, -1]]
 # X, _ = make_blobs(n_samples=10000, centers=centers, cluster_std=0.6)
 
-df = pd.read_csv('../assets/436-Simon-Doyle-Web-Mobile-Actions.csv')
+df = pd.read_csv('../assets/436-Web-Mobile-Actions.csv')
 X = df.as_matrix(columns=df.columns[1:])
 
 # centers = [[1, 1], [-1, -1], [1, -1]]

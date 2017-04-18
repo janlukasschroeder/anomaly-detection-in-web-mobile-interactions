@@ -9,7 +9,7 @@ import pandas as pd
 # centers = [[1, 1], [-1, -1], [1, -1]]
 # X, _ = make_blobs(n_samples=10000, centers=centers, cluster_std=0.6)
 
-df = pd.read_csv('../assets/436-Simon-Doyle-Web-Mobile-Actions.csv')
+df = pd.read_csv('../assets/436-Web-Mobile-Actions.csv')
 X = df.as_matrix(columns=df.columns[1:])
 
 # The following bandwidth can be automatically detected using
@@ -30,6 +30,8 @@ from itertools import cycle
 
 plt.figure(1)
 plt.clf()
+plt.xlim((-5, 150))
+plt.ylim((-5, 150))
 
 colors = cycle('bgrcmykbgrcmykbgrcmykbgrcmyk')
 for k, col in zip(range(n_clusters_), colors):
@@ -39,4 +41,6 @@ for k, col in zip(range(n_clusters_), colors):
     plt.plot(cluster_center[0], cluster_center[1], 'o', markerfacecolor=col,
              markeredgecolor='k', markersize=14)
 plt.title('Estimated number of clusters: %d' % n_clusters_)
+plt.xlabel("Web Actions per Day")
+plt.ylabel("Mobile Actions per Day")
 plt.show()

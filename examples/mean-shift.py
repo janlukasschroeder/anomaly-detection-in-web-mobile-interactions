@@ -6,11 +6,11 @@ from sklearn.datasets.samples_generator import make_blobs
 import pandas as pd
 
 
-# centers = [[1, 1], [-1, -1], [1, -1]]
-# X, _ = make_blobs(n_samples=10000, centers=centers, cluster_std=0.6)
+centers = [[1, 1], [-1, -1], [1, -1]]
+X, _ = make_blobs(n_samples=10000, centers=centers, cluster_std=0.6)
 
-df = pd.read_csv('../assets/436-Simon-Doyle-Web-Mobile-Actions.csv')
-X = df.as_matrix(columns=df.columns[1:])
+# df = pd.read_csv('../assets/436-Web-Mobile-Actions.csv')
+# X = df.as_matrix(columns=df.columns[1:])
 
 # The following bandwidth can be automatically detected using
 bandwidth = estimate_bandwidth(X, quantile=0.9)
